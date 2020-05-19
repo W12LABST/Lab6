@@ -11,9 +11,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
 public class GreetingController {
-//templates to wyswietlania komuinikatow
+//templates do wyswietlania komuinikatow
     private static final String template = "Hello, %s!";
-    private static final String template2 = "Twoj wiek to: %s!";//do endpointa zwracającego wiek
+    private static final String template2 = "Twoj wiek to: %s!";
     private static final String template3 = "Podany wiek jest strasznie wysoki: %d!";
     private static final String template4 = "Podano niepoprawny wiek, czyli %s!";
     private static final String template5 = "Podane imie to: %s,a plec to :%s!";
