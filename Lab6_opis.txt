@@ -1,0 +1,30 @@
+Opis realizacji zadań z laboratorium nr. 6
+
+	Główną klasą programu jest klasa Application, w której uruchamia się aplikacja. Klasa GreetingController
+zawiera adnotacje mapowania żądań. Znajduje się tam kod odpowiedzialny za działanie endpointów, których działanie
+opisane jest poniżej w zaimplementowanych fukcjonalnosciach). W każdej metodzie jest wykonana odpowiednia obsługa
+żądań (@Request...). Dodatkowo utworzone zostały metody dodatkowe w Klasie Dodatkowe służace sprawdzaniu poprawnie
+wpisanego wieku oraz weryfikacji czy wpisane imie jest imieniem żeńskim czy męskim. W klasie WięcejDanych znajduje
+się konstrkuktor z większa iloscią parametrów niż w klasie Greeting służacy do pobrania dodatkowych parametrów od
+użytkownia. Szczegółowy opis poszczególnych fragmentów kodu znajduje sie w programie.
+
+Zaimplementowane funkcjonalności (dany endpoint):
+ - endpoint o nazwie "bye"                                     (http://localhost:8080/bye)
+ - kilka endpointow działających niezależnie jeden od drugiego (http://localhost:8080/zadanie2) 
+ - Wyswietlenie innego parametru, czyli wieku osoby w JSON'ie  (http://localhost:8080/zadanie3?wiek=23)
+ - Wyswietlenie kilku parametrów naraz: id, imie, wiek         (http://localhost:8080/zadanie4?wiek=23&imie=Piotr)
+ - Weryfikacja rodzaju imienia (po wpisaniu tego samego endpointa co poprzednio dodatkowo 
+	zostanie wyswietlony rodzaj imienia)                   (http://localhost:8080/zadanie5?wiek=23&imie=Piotr)
+ - Sprawdzanie czy wpisany tekst zawiera się we wzorcu  
+	zawiera się we wzorcu:     (http://localhost:8080/zadanie6?wyszukaj=kot)
+	nie zawiera się we wzorcu: (http://localhost:8080/zadanie6?wyszukaj=okno)
+ - Weryfikacja poprawnie wpisanego wieku
+
+Klasy:
+ - Application
+ - Greeting
+ - GreetingController
+ - WiecejDanych
+ - CountService
+ - Dodatkowe
+
