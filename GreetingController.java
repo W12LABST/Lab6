@@ -31,7 +31,7 @@ public class GreetingController {
     }
 
 //nowy endpoint utworzony poprzez skopiowanie konstruktora Greeting:
-//przerobiony drugi endpoint zwracający wpisane imię w JSON'ie
+//przerobiony drugi endpoint z JSON'em zwracającym wpisane imie:
     @RequestMapping(path="/zadanie2", method = GET)    // odpowiada endpoin'tom http
     public Greeting greeting1(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(),String.format(template, name));
