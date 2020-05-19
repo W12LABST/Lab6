@@ -37,7 +37,7 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),String.format(template, name));
     }
 
-//endpoint zwracający wiek osoby
+//JSON w tym endpoincie zwraca wiek osoby
     @RequestMapping(path="/zadanie3", method = GET)    // odpowiada endpoin'tom http
     public Greeting greeting2(@RequestParam(value = "wiek", defaultValue = "0") String wiek) {
         int b = dodatkowe.a(wiek);
@@ -50,7 +50,7 @@ public class GreetingController {
         }
     }
 
-    //endpoint zwracający wiek oraz imie osoby
+    //JSON w tym endpoincie zwraca wiek oraz imie osoby
     @RequestMapping(path="/zadanie4", method = GET)    // odpowiada endpoin'tom http
     public WiecejDanych greeting3(@RequestParam(value = "wiek", defaultValue = "0") String wiek, @RequestParam(value = "imie", defaultValue = "") String imie) {
         int b = dodatkowe.a(wiek);
@@ -63,7 +63,7 @@ public class GreetingController {
         }
     }
 
-    //endpoint zwracający wiek ,imie oraz plec osoby
+    //JSON w tym endpoincie zwraca wiek ,imie oraz plec osoby
     @RequestMapping(path="/zadanie5", method = GET)    // odpowiada endpoin'tom http
     public WiecejDanych greeting4(@RequestParam(value = "wiek", defaultValue = "0") String wiek, @RequestParam(value = "imie", defaultValue = "") String imie) {
         int b = dodatkowe.a(wiek);
